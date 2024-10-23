@@ -6,7 +6,7 @@ This project is a Customer Relationship Management (CRM) API system designed to 
 
 ## Key Features
 
-1. **Automated Database Population**: A cron job that runs daily at 12 AM to populate the database. Also checks are madee if the backend was down at 12 or started for the first time even in that case db is populated, ensuring no duplicated entries.
+1. **Automated Database Population**: A cron job that runs daily at 12 AM to populate the database. Also checks are made if the backend was down at 12 or started for the first time even in that case db is populated, ensuring no duplicated entries.
 2. **Email Notifications**: Sends an email notification to yourself using Nodemailer after each database population. The email includes:
    - Campaigns about to finish today.
    - Newly fetched campaigns.
@@ -29,7 +29,7 @@ This project is a Customer Relationship Management (CRM) API system designed to 
 
 ## Setup Instructions
 
-1. **Clone the Repository**:
+ **Clone the Repository**:
    ```bash
    git clone https://github.com/Shahid33Ali/CRM-api.git
 
@@ -56,7 +56,7 @@ API_END_POINT=http://localhost:5000/api/campaigns 'api end point for db populati
 ```
 nodemon src/index.ts
 ```
-##Test the API Endpoints: Use Postman or any API testing tool to interact with the following endpoints for PDF Generation:
+## Test the API Endpoints: Use Postman or any API testing tool to interact with the following endpoints for PDF Generation:
 
 ```
 GET /api/pdf
@@ -64,7 +64,7 @@ GET /api/pdf
 This endpoint generates a PDF report of newly fetched and updated campaigns.
 Dynamic Campaign Data (from the separate project):
 
-** In the [campaigns-api](https://github.com/Shahid33Ali/campaigns-api)) repository which has the fake campaigns listed:
+## In the [campaigns-api](https://github.com/Shahid33Ali/campaigns-api)) repository which has the fake campaigns listed:
 Wew can expect the data in this format:
 ```
 [
