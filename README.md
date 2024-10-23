@@ -58,9 +58,9 @@ nodemon src/index.ts
 ```
 ## Test the API Endpoints: Use Postman or any API testing tool to interact with the following endpoints for PDF Generation:
 
-```
-GET /api/pdf
-```
+
+- **GET** `/generate/pdf`
+  
 This endpoint generates a PDF report of newly fetched and updated campaigns.
 Dynamic Campaign Data (from the separate project):
 
@@ -102,10 +102,10 @@ Wew can expect the data in this format:
 ]
 
 ```
-### Api end point
-```
-GET /api/campaigns?num=20
-```
+### Api end point 
+
+-**GET** `/api/campaigns?num=20`
+
 This endpoint returns 20 random campaign documents by default.
 You can customize the number of campaigns by adjusting the num query parameter (e.g., ?num=20 to get 20 documents).
 ## Important Notes
