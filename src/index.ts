@@ -23,7 +23,7 @@ dbChecker().then(async (res) => {
     await emailGenerator();
   }
 });
-app.use("/generate/pdf", router);
+app.use("/api/pdf", router);
 app.listen(3001, () => {
   console.log("Listening on port 3001");
 });
