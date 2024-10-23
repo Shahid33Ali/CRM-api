@@ -3,7 +3,7 @@ import Campaign, { Campaign as CampaignType } from "../model/CampaignModel";
 
 export async function dbPopulator() {
   try {
-    const response = await axios.get("http://localhost:5000/api/campaigns");
+    const response = await axios.get(process.env.API_END_POINT as string);
     const rawdata: CampaignType[] = response.data;
 
     for (const campaign of rawdata) {
