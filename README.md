@@ -45,6 +45,7 @@ cd CRM-api
 npm install
 ```
 
+
 ## .env setup 
 ```
 MONGO_URL=your mongodb url
@@ -54,11 +55,13 @@ API_END_POINT=http://localhost:5000/api/campaigns 'api end point for db populati
 
 ```
 
+
 ## Start the Server:
 
 ```bash
 nodemon src/index.ts
 ```
+
 
 ## Test the API Endpoints: Use Postman or any API testing tool to interact with the following endpoints for PDF Generation:
 
@@ -67,6 +70,7 @@ nodemon src/index.ts
   
 This endpoint generates a PDF report of newly fetched and updated campaigns.
 Dynamic Campaign Data (from the separate project):
+
 
 ## In the [campaigns-api](https://github.com/Shahid33Ali/campaigns-api) repository which has the fake campaigns listed:
 Wew can expect the data in this format:
@@ -112,6 +116,7 @@ Wew can expect the data in this format:
 
 This endpoint returns 20 random campaign documents by default.
 You can customize the number of campaigns by adjusting the num query parameter (e.g., ?num=20 to get 20 documents).
+
 
 ## Important Notes
 Make sure to set up your environment variables correctly for email notifications.
