@@ -6,7 +6,7 @@ This project is a Customer Relationship Management (CRM) API system designed to 
 
 ## Key Features
 
-1. **Automated Database Population**: A cron job that runs daily at 12 AM to populate the database. It also checks if the backend was down or started for the first time, ensuring no duplicated entries.
+1. **Automated Database Population**: A cron job that runs daily at 12 AM to populate the database. Also checks are madee if the backend was down at 12 or started for the first time even in that case db is populated, ensuring no duplicated entries.
 2. **Email Notifications**: Sends an email notification to yourself using Nodemailer after each database population. The email includes:
    - Campaigns about to finish today.
    - Newly fetched campaigns.
