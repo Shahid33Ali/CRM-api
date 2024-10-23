@@ -32,3 +32,43 @@ This project is a Customer Relationship Management (CRM) API system designed to 
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/Shahid33Ali/CRM-api.git
+
+Navigate to the Project Directory:
+
+bash
+Copy code
+cd CRM-api
+Install Dependencies:
+
+bash
+Copy code
+npm install
+Start the Server:
+
+bash
+Copy code
+nodemon index.js
+Test the API Endpoints: Use Postman or any API testing tool to interact with the following endpoints:
+
+PDF Generation:
+
+bash
+Copy code
+GET /api/pdf
+This endpoint generates a PDF report of newly fetched and updated campaigns.
+Dynamic Campaign Data (from the separate project):
+
+In the campaign-api repository:
+bash
+Copy code
+GET /api/campaigns?num=10
+This endpoint returns 10 random campaign documents by default.
+You can customize the number of campaigns by adjusting the num query parameter (e.g., ?num=20 to get 20 documents).
+Important Notes
+Make sure to set up your environment variables correctly for email notifications.
+The cron job will populate the database daily at 12 AM.
+The PDF generation endpoint uses ETL to format data for reports.
+sql
+Copy code
+
+Feel free to copy this directly into your `README.md` file! If you need any further adjustm
