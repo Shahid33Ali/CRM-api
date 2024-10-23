@@ -11,7 +11,7 @@ This project is a Customer Relationship Management (CRM) API system designed to 
    - Campaigns about to finish today.
    - Newly fetched campaigns.
    - Updates on leads that have been converted.
-3. **PDF Generation**: Provides a PDF report using PDFKit of newly fetched and updated campaigns via an API endpoint. It uses an ETL (Extract, Transform, Load) process as middleware to extract relevant data from the database.
+3. **PDF Generation**: Provides a PDF report using PDFKit of newly fetched and updated campaigns via an API endpoint. It uses an **ETL (Extract, Transform, Load)** process as middleware to extract relevant data from the database.
 4. **Dynamic Data Generation**: Includes a separate endpoint (found in [campaigns-api](https://github.com/Shahid33Ali/campaigns-api)) for generating dynamic campaign data using Faker.js. This endpoint returns 10 documents by default but can be customized via a query parameter (`num`).
 5. **Moment.js Integration**: Moment.js is used for handling time-related functionalities like scheduling cron jobs and managing campaign deadlines.
 
