@@ -3,7 +3,7 @@ import Campaign, { Campaign as CampaignType } from "../model/CampaignModel";
 
 export async function dbPopulator() {
   try {
-    const response = await axios.get("http://localhost:5000/api/campaigns"); // Replace with your actual API URL
+    const response = await axios.get("http://localhost:5000/api/campaigns");
     const rawdata: CampaignType[] = response.data;
 
     for (const campaign of rawdata) {
@@ -13,12 +13,12 @@ export async function dbPopulator() {
         });
 
         if (!existingCampaign) {
-          const newCampaign = new Campaign(campaign); // Use the campaign data directly
+          const newCampaign = new Campaign(campaign);
           await newCampaign.save();
         } else {
           existingCampaign.leads = campaign.leads;
           existingCampaign.fetchedAt = new Date();
-          await existingCampaign.save(); // Save the updated campaign
+          await existingCampaign.save();
         }
       } catch (dbError) {
         console.error(`Error processing campaign ${campaign.name}:`, dbError);
