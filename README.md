@@ -119,6 +119,6 @@ You can customize the number of campaigns by adjusting the num query parameter (
 
 
 ## Important Notes
-Make sure to set up your environment variables correctly for email notifications.
-The cron job will populate the database daily at 12 AM.
-The PDF generation endpoint uses ETL to format data for reports.
+1. Make sure to set up your environment variables correctly for email notifications.
+2. The cron job will populate the database daily at 12 AM.
+3. The PDF generation endpoint uses ETL to format data for reports.
