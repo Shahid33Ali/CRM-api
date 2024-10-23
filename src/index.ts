@@ -1,6 +1,6 @@
 import express from "express";
 const app = express();
-import router from "./Routes/PdfController";
+import router from "./Routes/PdfRoute";
 import mongoose from "mongoose";
 import { dbChecker } from "./utils/dbChecker";
 import { dbPopulator } from "./utils/dbpopulater";

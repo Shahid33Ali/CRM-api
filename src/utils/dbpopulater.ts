@@ -16,7 +16,8 @@ export async function dbPopulator() {
           const newCampaign = new Campaign(campaign); // Use the campaign data directly
           await newCampaign.save();
         } else {
-          existingCampaign.leads = campaign.leads; // Update leads
+          existingCampaign.leads = campaign.leads;
+          existingCampaign.fetchedAt = new Date();
           await existingCampaign.save(); // Save the updated campaign
         }
       } catch (dbError) {
