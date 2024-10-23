@@ -35,12 +35,12 @@ This project is a Customer Relationship Management (CRM) API system designed to 
 ```
 ## Navigate to the Project Directory:
 
-```
+```bash
 cd CRM-api
 ```
 ## Install Dependencies:
 
-```
+```bash
 npm install
 ```
 ## .env setup 
@@ -64,7 +64,7 @@ nodemon src/index.ts
 This endpoint generates a PDF report of newly fetched and updated campaigns.
 Dynamic Campaign Data (from the separate project):
 
-## In the [campaigns-api](https://github.com/Shahid33Ali/campaigns-api)) repository which has the fake campaigns listed:
+## In the [campaigns-api](https://github.com/Shahid33Ali/campaigns-api) repository which has the fake campaigns listed:
 Wew can expect the data in this format:
 ```json
 [
@@ -104,7 +104,7 @@ Wew can expect the data in this format:
 ```
 ### Api end point 
 
--**GET** `/api/campaigns?num=20`
+- **GET** `/api/campaigns?num=20`
 
 This endpoint returns 20 random campaign documents by default.
 You can customize the number of campaigns by adjusting the num query parameter (e.g., ?num=20 to get 20 documents).
