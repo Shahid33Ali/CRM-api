@@ -3,7 +3,7 @@ import Campaign, { Campaign as CampaignType } from "../model/CampaignModel";
 
 export async function dbPopulator() {
   try {
-    const response = await axios.get("YOUR_API_URL_HERE"); // Replace with your actual API URL
+    const response = await axios.get("http://localhost:5000/api/campaigns"); // Replace with your actual API URL
     const rawdata: CampaignType[] = response.data;
 
     for (const campaign of rawdata) {
@@ -23,6 +23,7 @@ export async function dbPopulator() {
         console.error(`Error processing campaign ${campaign.name}:`, dbError);
       }
     }
+    console.log("db populated");
   } catch (error) {
     console.error("Error fetching data:", error);
   }
