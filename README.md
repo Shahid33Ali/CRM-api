@@ -38,11 +38,13 @@ This project is a Customer Relationship Management (CRM) API system designed to 
 ```bash
 cd CRM-api
 ```
+
 ## Install Dependencies:
 
 ```bash
 npm install
 ```
+
 ## .env setup 
 ```
 MONGO_URL=your mongodb url
@@ -51,11 +53,13 @@ MY_PASSWORD="App password generated on gmail account 16chars without spaces"
 API_END_POINT=http://localhost:5000/api/campaigns 'api end point for db population'
 
 ```
+
 ## Start the Server:
 
 ```bash
 nodemon src/index.ts
 ```
+
 ## Test the API Endpoints: Use Postman or any API testing tool to interact with the following endpoints for PDF Generation:
 
 
@@ -108,6 +112,7 @@ Wew can expect the data in this format:
 
 This endpoint returns 20 random campaign documents by default.
 You can customize the number of campaigns by adjusting the num query parameter (e.g., ?num=20 to get 20 documents).
+
 ## Important Notes
 Make sure to set up your environment variables correctly for email notifications.
 The cron job will populate the database daily at 12 AM.
