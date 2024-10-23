@@ -12,7 +12,7 @@ This project is a Customer Relationship Management (CRM) API system designed to 
    - Newly fetched campaigns.
    - Updates on leads that have been converted.
 3. **PDF Generation**: Provides a PDF report using PDFKit of newly fetched and updated campaigns via an API endpoint. It uses an ETL (Extract, Transform, Load) process as middleware to extract relevant data from the database.
-4. **Dynamic Data Generation**: Includes a separate endpoint (found in [campaign-api](https://github.com/Shahid33Ali/campaigns-api)) for generating dynamic campaign data using Faker.js. This endpoint returns 10 documents by default but can be customized via a query parameter (`num`).
+4. **Dynamic Data Generation**: Includes a separate endpoint (found in [campaigns-api](https://github.com/Shahid33Ali/campaigns-api)) for generating dynamic campaign data using Faker.js. This endpoint returns 10 documents by default but can be customized via a query parameter (`num`).
 5. **Moment.js Integration**: Moment.js is used for handling time-related functionalities like scheduling cron jobs and managing campaign deadlines.
 
 ## Technologies Used
@@ -33,24 +33,30 @@ This project is a Customer Relationship Management (CRM) API system designed to 
    ```bash
    git clone https://github.com/Shahid33Ali/CRM-api.git
 
-Navigate to the Project Directory:
+## Navigate to the Project Directory:
 
 ```
 cd CRM-api
 ```
-Install Dependencies:
+## Install Dependencies:
 
 ```
 npm install
 ```
-Start the Server:
+## .env setup 
+```
+MONGO_URL=your mongodb url
+MY_EMAIL="gmail id"
+MY_PASSWORD="App password generated on gmail account 16chars without spaces"
+API_END_POINT=http://localhost:5000/api/campaigns 'api end point for db population'
+
+```
+## Start the Server:
 
 ```
 nodemon src/index.ts
 ```
-Test the API Endpoints: Use Postman or any API testing tool to interact with the following endpoints:
-
-PDF Generation:
+##Test the API Endpoints: Use Postman or any API testing tool to interact with the following endpoints for PDF Generation:
 
 ```
 GET /api/pdf
@@ -58,17 +64,51 @@ GET /api/pdf
 This endpoint generates a PDF report of newly fetched and updated campaigns.
 Dynamic Campaign Data (from the separate project):
 
-In the campaign-api repository:
-bash
-Copy code
-GET /api/campaigns?num=10
-This endpoint returns 10 random campaign documents by default.
+** In the [campaigns-api](https://github.com/Shahid33Ali/campaigns-api)) repository which has the fake campaigns listed:
+Wew can expect the data in this format:
+```
+[
+  {
+    "name": "Spring Sale",
+    "startDate": "2024-03-01T00:00:00Z",
+    "endDate": "2024-03-31T23:59:59Z",
+    "leads": [
+      {
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "converted": true
+      },
+      {
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "converted": false
+      }
+    ],
+    "fetchedAt": "2024-10-23T12:00:00Z"
+  },
+  {
+    "name": "Summer Promo",
+    "startDate": "2024-06-01T00:00:00Z",
+    "endDate": "2024-06-30T23:59:59Z",
+    "leads": [
+      {
+        "name": "Alice Johnson",
+        "email": "alice.johnson@example.com",
+        "converted": false
+      }
+    ],
+    "fetchedAt": "2024-10-23T12:00:00Z"
+  }
+]
+
+```
+Api end point
+```
+GET /api/campaigns?num=20
+```
+This endpoint returns 20 random campaign documents by default.
 You can customize the number of campaigns by adjusting the num query parameter (e.g., ?num=20 to get 20 documents).
-Important Notes
+## Important Notes
 Make sure to set up your environment variables correctly for email notifications.
 The cron job will populate the database daily at 12 AM.
 The PDF generation endpoint uses ETL to format data for reports.
-sql
-Copy code
-
-Feel free to copy this directly into your `README.md` file! If you need any further adjustm
