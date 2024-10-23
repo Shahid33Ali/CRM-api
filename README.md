@@ -32,7 +32,7 @@ This project is a Customer Relationship Management (CRM) API system designed to 
  **Clone the Repository**:
    ```bash
    git clone https://github.com/Shahid33Ali/CRM-api.git
-
+```
 ## Navigate to the Project Directory:
 
 ```
@@ -53,7 +53,7 @@ API_END_POINT=http://localhost:5000/api/campaigns 'api end point for db populati
 ```
 ## Start the Server:
 
-```
+```bash
 nodemon src/index.ts
 ```
 ## Test the API Endpoints: Use Postman or any API testing tool to interact with the following endpoints for PDF Generation:
@@ -66,7 +66,7 @@ Dynamic Campaign Data (from the separate project):
 
 ## In the [campaigns-api](https://github.com/Shahid33Ali/campaigns-api)) repository which has the fake campaigns listed:
 Wew can expect the data in this format:
-```
+```json
 [
   {
     "name": "Spring Sale",
@@ -102,7 +102,7 @@ Wew can expect the data in this format:
 ]
 
 ```
-Api end point
+### Api end point
 ```
 GET /api/campaigns?num=20
 ```
