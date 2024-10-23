@@ -35,26 +35,26 @@ This project is a Customer Relationship Management (CRM) API system designed to 
 
 Navigate to the Project Directory:
 
-bash
-Copy code
+```
 cd CRM-api
+```
 Install Dependencies:
 
-bash
-Copy code
+```
 npm install
+```
 Start the Server:
 
-bash
-Copy code
-nodemon index.js
+```
+nodemon src/index.ts
+```
 Test the API Endpoints: Use Postman or any API testing tool to interact with the following endpoints:
 
 PDF Generation:
 
-bash
-Copy code
+```
 GET /api/pdf
+```
 This endpoint generates a PDF report of newly fetched and updated campaigns.
 Dynamic Campaign Data (from the separate project):
 
